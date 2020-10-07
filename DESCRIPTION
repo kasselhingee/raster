@@ -1,45 +1,12 @@
-Package: raster
+Package: rasternetcdfdimsel
 Type: Package
-Title: Geographic Data Analysis and Modeling
-Version: 3.0-7
+Title: Correction to Raster Package for Reading NetCDF Files
+Version: 1.0-0
 Date: 2019-09-22
 Depends: sp (>= 1.2-0), R (>= 3.0.0)
 Suggests: rgdal (>= 0.9-1), rgeos (>= 0.3-8), ncdf4, igraph, tcltk, parallel, rasterVis, MASS, sf, testthat
 LinkingTo: Rcpp
 Imports: Rcpp, methods
 SystemRequirements: C++11
-Description: Reading, writing, manipulating, analyzing and modeling of gridded spatial data. The package implements basic and high-level functions. Processing of very large files is supported. There is a also support for vector data operations such as intersections. See the manual and tutorials on <https://rspatial.org/> to get started.
+Description: The Raster package (as of version 3.0-7) had a 'dims' option for selecting the order of the dimensions. This modification of the raster package enables NetCDF files with the x-index incrementing after the y-index to be read correctly. The changes broke other features of the raster package and so were not pulled into the main raster package. 
 License: GPL (>=3)
-URL: https://CRAN.R-project.org/package=raster
-BugReports: https://github.com/rspatial/raster/issues/
-Authors@R: c(
-	person("Robert J.", "Hijmans", role = c("cre", "aut"),  
-			email = "r.hijmans@gmail.com", 
-			comment = c(ORCID = "0000-0001-5872-2872")),
-	person("Jacob", "van Etten", role = "ctb"),
-	person("Michael", "Sumner", role = "ctb"),
-	person("Joe", "Cheng", role = "ctb"),
-	person("Andrew", "Bevan", role = "ctb"),
-	person("Roger", "Bivand", role = "ctb"),
-	person("Lorenzo", "Busetto", role = "ctb"),
-	person("Mort", "Canty", role = "ctb"),
-	person("David", "Forrest", role = "ctb"),
-	person("Aniruddha", "Ghosh", role = "ctb"),
-	person("Duncan", "Golicher", role = "ctb"),
-	person("Josh", "Gray", role = "ctb"),
-	person("Jonathan A.", "Greenberg", role = "ctb"),
-	person("Paul", "Hiemstra", role = "ctb"),
-	person("Institute for Mathematics Applied Geosciences", role="cph"),
-	person("Charles", "Karney", role = "ctb"),
-	person("Matteo", "Mattiuzzi", role = "ctb"),
-	person("Steven", "Mosher", role = "ctb"),
-	person("Jakub", "Nowosad", role = "ctb"),
-	person("Edzer", "Pebesma", role = "ctb"),
-	person("Oscar", "Perpinan Lamigueiro", role = "ctb"),
-	person("Etienne B.", "Racine", role = "ctb"),
-	person("Barry", "Rowlingson", role = "ctb"),
-	person("Ashton", "Shortridge", role = "ctb"),
-	person("Bill", "Venables", role = "ctb"),
-	person("Rafael", "Wueest", role = "ctb")
-	)
-
